@@ -2,9 +2,9 @@
 
 <% @tasks.each do |task| %>
 <% if task.completed == true %>
-<li><input type='checkbox' checked='true'> <%= link_to "#{task.title} | #{task.details}", task_path(task.id) %> <%= link_to "#delete#", task_path(task), method: :delete %> </li>
+<li><input type='checkbox' checked='true'> <%= link_to "#{task.title} | #{task.details}", task_path(task.id) %> <%= link_to "...🧨", task_path(task), method: :delete %> </li>
 <% elsif task.completed == false %>
-<li><input type='checkbox'> <%= link_to "#{task.title} | #{task.details}", task_path(task.id) %> <%= link_to "#delete#", task_path(task), method: :delete %> </li>
+<li><input type='checkbox'> <%= link_to "#{task.title} | #{task.details}", task_path(task.id) %> <%= link_to "...🧨", task_path(task), method: :delete %> </li>
 <% end%>
 <% end %>
 
